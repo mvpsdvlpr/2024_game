@@ -8,10 +8,6 @@ import constant as SET_UP
 # init
 pygame.init()
 
-# Game configurations
-WINDOW = pygame.display.set_mode((SET_UP.WIDTH,SET_UP.HEIGHT)) # display configuration
-pygame.display.set_caption("2048") # Set title for game window
-
 '''
     Game font configuration
     init custom font
@@ -23,3 +19,25 @@ pygame.display.set_caption("2048") # Set title for game window
 # custom_font = pygame.font.Font(font_path, font_size)
 
 FONT = pygame.font.SysFont("Roboto",60,bold=False)
+
+# Game configurations
+WINDOW = pygame.display.set_mode((SET_UP.WIDTH,SET_UP.HEIGHT)) # display configuration
+pygame.display.set_caption("2048") # Set title for game window
+
+
+def main(window):
+    clock = pygame.time.Clock()
+    run = True
+
+    while run:
+        clock.tick(SET_UP.FPS)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                break
+    
+    pygame.quit()
+
+if __name__ =="__main__":
+    main(WINDOW)
