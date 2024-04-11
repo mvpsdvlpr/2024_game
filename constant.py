@@ -19,5 +19,5 @@ OUTLINE_THICKNESS = 10
 BACKGROUND_COLOR = (205, 192,180)
 FONT_COLOR= (119,110,101)
 
-# Pygame Window
- 
+# Movement velocity
+MOVE_VEL = 20
