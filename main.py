@@ -3,8 +3,8 @@ import random
 import math
 
 # Constant import
+import Tiles.Tile as Tiles
 import constant as SET_UP
-
 # init
 pygame.init()
 
@@ -19,7 +19,6 @@ pygame.init()
 # custom_font = pygame.font.Font(font_path, font_size)
 
 FONT = pygame.font.SysFont("Roboto", 60, bold=False)
-
 
 # Game configurations
 WINDOW = pygame.display.set_mode((SET_UP.WIDTH, SET_UP.HEIGHT))  # display configuration
@@ -57,15 +56,23 @@ def draw_grid(window):
     pygame.draw.rect(window, SET_UP.OUTLINE_COLOR, (0, 0, SET_UP.WIDTH, SET_UP.HEIGHT),SET_UP.OUTLINE_THICKNESS)
 
 
-def draw(window):
+def draw(window,tiles):
     window.fill(SET_UP.BACKGROUND_COLOR)
+
+    for tile in tiles.values():
+        tile.draw(window)
+    
     draw_grid(window)
+
     pygame.display.update()
 
 
 def main(window):
     clock = pygame.time.Clock()
     run = True
+    
+    tiles =  {}
+
 
     while run:
         clock.tick(SET_UP.FPS)
@@ -73,7 +80,7 @@ def main(window):
             if event.type == pygame.QUIT:
                 run = False
                 break
-        draw(window)
+        draw(window,tiles)
 
     pygame.quit()
 
