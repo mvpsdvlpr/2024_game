@@ -4,6 +4,8 @@
 
 Este proyecto implementa el popular juego **2048** utilizando la biblioteca Pygame. El objetivo del juego es combinar mosaicos con números iguales para obtener un mosaico con el número 2048. A continuación, se describen los componentes clave del proyecto:
 
+![screenshot](preview.png)
+
 ### Uso
 
 1. Clona este repositorio.
