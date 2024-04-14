@@ -1,6 +1,5 @@
 # Constantes y variables
 
-## Tiles
 ### constant.py
 
 Este script define varias constantes y variables que se utilizan en el juego. A continuación, se presentan los detalles:
