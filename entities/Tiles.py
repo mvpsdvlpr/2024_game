@@ -54,7 +54,13 @@ class Tile:
         )
 
     def move(self, delta):
-        pass
+        self.x += delta[0]
+        self.y += delta[1]
 
-    def set_pos(self):
-        pass
+    def set_pos(self, ceil=False):
+        if ceil:
+            self.row = math.ceil(self.y / SET_UP.RECT_HEIGHT)
+            self.col = math.ceil(self.x / SET_UP.RECT_WIDTH)
+        else:
+            self.row = math.floor(self.y / SET_UP.RECT_HEIGHT)
+            self.col = math.floor(self.x / SET_UP.RECT_HEIGHT)
