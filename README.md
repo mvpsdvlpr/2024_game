@@ -12,7 +12,7 @@ Este proyecto implementa el popular juego **2048** utilizando la biblioteca Pyga
 
 ¡Explora el código y diviértete programando tu propio juego de 2048! 😊
 
-## documentation
+## Documentation
 - Variables [aqui](variables.md)
 
 - Tiles [aqui](tiles.md)
